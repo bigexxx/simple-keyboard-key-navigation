@@ -74,7 +74,7 @@ class SimpleKeyboardKeyNavigation {
           }
         }
 
-        module.setMarker(rowPos, btnPos);
+        return module.setMarker(rowPos, btnPos);
       };
 
       module.down = () => {
@@ -92,21 +92,21 @@ class SimpleKeyboardKeyNavigation {
           }
         }
 
-        module.setMarker(rowPos, btnPos);
+        return module.setMarker(rowPos, btnPos);
       };
 
       module.right = () => {
         let rowPos = module.markerPosition.row;
         let btnPos = module.markerPosition.button + module.step;
 
-        module.setMarker(rowPos, btnPos);
+        return module.setMarker(rowPos, btnPos);
       };
 
       module.left = () => {
         let rowPos = module.markerPosition.row;
         let btnPos = module.markerPosition.button - module.step;
 
-        module.setMarker(rowPos, btnPos);
+        return module.setMarker(rowPos, btnPos);
       };
 
       module.press = () => {
